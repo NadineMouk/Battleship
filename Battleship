@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char grilleJ1[11][11]={0};
+    char grilleJ2[11][11]={0};
+    int i,j;
+    char incr_lettre='A';
+    char incr_chiffre='1';
+
+    for(i=0;i<11;i++)               //CREATION DE MAP
+    {
+
+        for(j=0;j<11;j++)
+        {
+          grilleJ1[i][0]=incr_lettre;
+          grilleJ1[0][j+1]=incr_chiffre;
+          incr_chiffre++;
+
+        }
+        incr_lettre++;
+
+    }
+
+
+
+   for(i=0;i<11;i++)                //AFFICHAGE
+    {
+        for(j=0;j<11;j++)
+        {
+          printf("%c   ",grilleJ1[i][j]);
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}
